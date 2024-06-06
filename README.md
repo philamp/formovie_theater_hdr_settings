@@ -43,7 +43,7 @@ R | 53 | 53 | 70
 G | 41 | 54 | 70 
 B | 51 | 50 | 79 
 C | 57 | 46 | 76 
-M | 40 | 64 | 73 
+M | 40 | 59 | 73 
 Y | 60 | 42 | 70 
 FT | 48 | 47 | 65 
 
@@ -68,10 +68,17 @@ Everything else | off
 
 > Flesh tone ON could help if you still find flesh tone to be to saturated, but it's not advised
 
-## SDR Settings
-For SDR Calibration, I think https://www.projectorcentral.com/Formovie-Theater-UST-Laser-TV-Projector-Review.htm settings are very good.
+## Other
 
-## General
+### SDR Settings
+For SDR Calibration:
+- I think https://www.projectorcentral.com/Formovie-Theater-UST-Laser-TV-Projector-Review.htm settings are very good.
+- Color space must be set to ON in Advanced video settings
+
+### Contrast management
 Note that adaptive luma control to "middle" (other values than 'middle' are suboptimal) can be great in SDR and can help in pure HDR too (especially with this contrast adjustement issue), but it's also matter of taste.
+
+### 11 Point White Balance Correction
+I found effect to be very subtle but I think https://www.projectorcentral.com/Formovie-Theater-UST-Laser-TV-Projector-Review.htm calibration on that matter is good.
 
 
