@@ -11,7 +11,7 @@ Initially this is based on https://www.projectorcentral.com/Formovie-Theater-UST
 
 # HDR / LLDV settings (BT2020)
 
-## MAIN IMAGE SETTINGS
+## Main image settings
 -- |  value  
 ----- | ----
 Brightness | 48
