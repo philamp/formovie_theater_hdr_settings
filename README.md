@@ -9,15 +9,16 @@ Initially this is based on https://www.projectorcentral.com/Formovie-Theater-UST
 > - all units are a little bit different and might need different calibration.
 > - I'm projecting on a Vividstorm 92" CLR screen with a 0.6 gain
 
-## HDR / LLDV settings (BT2020)
+# HDR / LLDV settings (BT2020)
 
-MAIN IMAGE SETTINGS   |  value  
+## MAIN IMAGE SETTINGS
+-- |  value  
 ----- | ----
 Brightness | 48
 Contrast   | 83 *
 Saturation | 32
 Hue        | 0
-Gamma      | 'Middle'
+Gamma      | 'Middle' !
 
 > [!TIP]
 > \* This contrast value has to be adjusted:
@@ -28,8 +29,8 @@ Gamma      | 'Middle'
 >     - ~0.035 nits for minlum
 >     - ~280 nits for maxlum (it's absolutely allright to go down to 100 nits if you have a big screen thus less nits)
 
-
-Color temperature  | value
+## Color temperature
+--  | value
 ---- | ----
 R | -2
 G | -12
@@ -37,7 +38,9 @@ B | -28
 
 > (might be "cooler" than projector central's advised one (d65) but it's a compromise to keep good gamut coverage)
 
-COLOR MANAGEMENT for : | HUE | SATURATION | BRIGHTNESS
+## Color management
+
+-- | HUE | SATURATION | BRIGHTNESS
 ---- | ---- | ---- | ----
 R | 53 | 53 | 70 
 G | 41 | 54 | 70 
@@ -47,7 +50,7 @@ M | 40 | 59 | 73
 Y | 60 | 42 | 70 
 FT | 48 | 47 | 65 
 
-COLOR MANAGEMENT for : | OFFSET |  GAIN
+--  | OFFSET |  GAIN
 ---- | ---- | ----
 R | 48 | 48
 G | 50 | 44
@@ -57,28 +60,30 @@ B | 50 | 40
 > - BRIGHTNESS Values are set around roughly 70 with some adjustements made from visual feedback, I think those values are not yet optimal :/
 > - SATURATION are based on projector central but with lower values for R, G and FT (and for magenta I'm not sure such a high value is great), to avoid unatural skin tones (and the result seems close to natural to me)
 
-Advanced video | Value
+## Advanced video
+
+Settings  | Value
 ---- | ----
 Hdmi rgb range | auto
 color space | auto 
-Di film mode | auto 
-Decounter | low or middle
+Di film mode | auto !
+Decounter | 'low' or 'middle'
 Flesh tone | off
-Everything else | off
+Everything else | off !
 
 > Flesh tone ON could help if you still find flesh tone to be to saturated, but it's not advised
 
-## Other
+# Other
 
-### SDR Settings
+## SDR Settings
 For SDR Calibration:
 - I think https://www.projectorcentral.com/Formovie-Theater-UST-Laser-TV-Projector-Review.htm settings are very good.
 - Color space must be set to ON in Advanced video settings
 
-### Contrast management
+## Contrast management
 Note that adaptive luma control to "middle" (other values than 'middle' are suboptimal) can be great in SDR and can help in pure HDR too (especially with this contrast adjustement issue), but it's also matter of taste.
 
-### 11 Point White Balance Correction
+## 11 Point White Balance Correction
 I found effect to be very subtle but I think https://www.projectorcentral.com/Formovie-Theater-UST-Laser-TV-Projector-Review.htm calibration on that matter is good.
 
 
