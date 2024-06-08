@@ -61,7 +61,8 @@ B | 50 | 40
 
 > - HUE settings are the same as https//www.projectorcentral.com/Formovie-Theater-UST-Laser-TV-Projector-Review.htm .
 > - BRIGHTNESS Values are set around roughly 70 with some adjustements made from visual feedback, I think those values are not yet optimal. You can test having all set to 50.
-> - SATURATION are based on projector central but with lower values for R, G and FT (and for magenta I'm not sure such a high value is great), to avoid unatural skin tones (and the result seems close to natural to me).
+> - SATURATION are based on projector central but with lower values for R, G and FT , to avoid unatural skin tones (and the result seems close to natural to me).
+> - For Magenta I'm not sure such a high value is great.
 
 
 # 2/ SDR (BT709 or BT2020)
