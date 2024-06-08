@@ -88,7 +88,7 @@ Everything else | ``off`` !
 > - ``DNR`` gives smearing effects sometimes. I think it must be avoided.  
 
 ## About Contrast
-This projector has a *very* good 'potential' contrast. It means that to achieve its full potential, the signal maximum digital brightness value must fit 'just well' within physical capabilities of the projector.
+This projector has a *very* good 'potential' contrast. It means that to achieve its full potential, the digital maximum brightness value must fit 'just well' within physical capabilities of the projector.
 - In SDR, the 52/40 (brightness/contrast) values will fit well and source material is always fitting well because SDR is easier to deal with.
 - In HDR, as advised in 'Main image', contrast slider must be visually tuned because source material is not always 'fitting well' in terms of actual data and HDR metadata used by the tone-mapping.
 - In native Dolby Vision mode, Formovie has opted to cap the max brithness to roughly half of the projector/s capabilities. It's maybe to ensure consistant color calibration across luminosity although they recently said they would release a firmware around june 2024 to fix that. In the meantime, the LLDV method is a "power user" solution to break that limit.
