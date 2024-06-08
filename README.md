@@ -81,7 +81,7 @@ Di film mode | ``auto`` (HDR) ; ``on`` (SDR)
 Decounter | ``off`` or ``low``
 Everything else | ``off`` !
 
-> - ``Flesh tone`` set to ``on`` could help in HDR if you still find flesh tone to be to saturated, but I don't advise it.
+> - ``Flesh tone`` set to ``on`` could help in HDR if you still find flesh tone to be too saturated, but I don't advise it.
 > - On poor SDR8 content these settings can be great :
 >   - ``De-counter`` set to ``middle`` to mitigate color banding artefacts. 
 >   - ``MPEG NR`` to mitigate compression artefacts.
