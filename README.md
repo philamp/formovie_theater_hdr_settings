@@ -97,7 +97,7 @@ This projector has a *very* good 'potential' contrast. It means that to achieve 
 > Online reviews are measuring contrast without taking that into account and they come up with contrast values that are lower in HDR mode than in SDR.
 
 > [!TIP]
-> - Tone-mapping in SDR will only fix this issue marginally, but is also a good solution if your player device has good HDR to SDR tone-mapping, especially if your screen max luminosity is around 100 nits (as 100 nits value is used for the HDR to SDR tone-mapping).
+> - Tone-mapping to SDR will only fix this issue marginally, but is also a good solution if your player device has good HDR to SDR tone-mapping, especially if your screen max luminosity is around 100 nits (as 100 nits value is used for the HDR to SDR tone-mapping).
 > - ``Advanced video`` > ``Adaptive luma control`` set to ``middle`` (other values are suboptimal IMHO) can be great in SDR and can help in pure HDR too, but it's also matter of taste and it's somewhat breaking the director's intent.
 
 ## 11 points white balance correction
