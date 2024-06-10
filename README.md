@@ -76,8 +76,8 @@ For SDR Calibration:
 --  | value
 ---- | ----
 Hdmi rgb range | ``auto``
-color space | ``auto`` 
-Di film mode | ``auto`` (HDR) ; ``on`` (SDR)
+color space | ``auto`` (HDR) ; ``on`` (SDR) 
+Di film mode | ``auto``
 Decounter | ``off`` or ``low``
 Everything else | ``off`` !
 
