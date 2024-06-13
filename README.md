@@ -83,8 +83,8 @@ Everything else | ``off`` !
 
 > - ``Flesh tone`` set to ``on`` could help in HDR if you still find flesh tone to be too saturated, but I don't advise it.
 > - On poor SDR8 content these settings can be great :
->   - ``De-counter`` set to ``middle`` to mitigate color banding artefacts. 
->   - ``MPEG NR`` to mitigate compression artefacts.
+>   - ``De-counter`` set to ``low`` or ``middle`` to mitigate color banding artefacts. 
+>   - ``MPEG NR`` set to  ``low`` or ``middle`` to mitigate compression artefacts.
 > - ``DNR`` gives smearing effects sometimes. I think it must be avoided.  
 
 ## About Contrast
