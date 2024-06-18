@@ -43,7 +43,8 @@ B | -28
 
 ## Color management
 
-> Gamma config. influence a lot the brightness that should be adjusted here I guess
+> - Gamma has to be set to middle for these settings to work
+> - Maybe worth trying with gamma bright and all brightness cursors to 50
 
 -- | HUE | SATURATION | BRIGHTNESS
 ---- | ---- | ---- | ----
