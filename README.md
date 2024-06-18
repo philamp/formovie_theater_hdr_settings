@@ -48,24 +48,25 @@ B | -28
 
 -- | HUE | SATURATION | BRIGHTNESS
 ---- | ---- | ---- | ----
-R | 53 | 52* | 65
-G | 41 | 54* | 65
-B | 51 | 50 | 70
-C | 57 | 46 | 70
-M | 40 | 55* | 65 
-Y | 55* | 50* | 65 
-FT | 48 | 48* | 60
+R | 53 | 52* | 65*
+G | 41 | 54* | 65*
+B | 51 | 50 | 70*
+C | 57 | 46 | 70*
+M | 40 | 55* | 65* 
+Y | 55* | 50* | 65* 
+FT | 48 | 48* | 60*
 
 --  | OFFSET |  GAIN
 ---- | ---- | ----
-R | 48 | 48
-G | 50 | 48
-B | 50 | 48
+R | 48* | 48*
+G | 50 | 48*
+B | 50 | 48*
 
 > - HUE settings are the same as https//www.projectorcentral.com/Formovie-Theater-UST-Laser-TV-Projector-Review.htm excecpt for yellow.
 > - SATURATION lowered for RED, FT and MAGENTA.
 > - BRIGHTNESS lowered by a lot. Worth trying 50 with Gamma bright as well.
 > - GAIN adusted to same value for all, should be adjusted with color temperature instead.
+> - ``*`` means it was changed from projectorcentral advice
 
 
 # 2/ SDR (BT709 or BT2020)
