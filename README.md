@@ -21,7 +21,7 @@ Brightness | 48
 Contrast   | 83 *
 Saturation | 32
 Hue        | 0
-Gamma      | ``middle`` !
+**Gamma**      | ``middle`` !
 
 > [!TIP]
 > \* This contrast value has to be adjusted :
@@ -36,33 +36,35 @@ Gamma      | ``middle`` !
 --  | value
 ---- | ----
 R | -2
-G | -12
+G | -8
 B | -28
 
-> might be "cooler" than projector central's advised one (d65) but it's a compromise to keep good gamut coverage.
+> might be a little "cooler" than projector central's advised one (d65) but it's a compromise to keep some more gamut coverage.
 
 ## Color management
 
+> Gamma config. influence a lot the brightness that should be adjusted here I guess
+
 -- | HUE | SATURATION | BRIGHTNESS
 ---- | ---- | ---- | ----
-R | 53 | 54 | 65 (prev.:70)
-G | 41 | 54 | 65 (prev.:70)
-B | 51 | 50 | 74 (prev.:79)
-C | 57 | 46 | 74 (prev.:76)
-M | 40 | 59 | 73 
-Y | 60 | 42 | 70 
-FT | 48 | 47 | 60 (prev.:65) 
+R | 53 | 52* | 65
+G | 41 | 54* | 65
+B | 51 | 50 | 70
+C | 57 | 46 | 70
+M | 40 | 55* | 65 
+Y | 55* | 50* | 65 
+FT | 48 | 48* | 60
 
 --  | OFFSET |  GAIN
 ---- | ---- | ----
 R | 48 | 48
-G | 50 | 44
-B | 50 | 40
+G | 50 | 48
+B | 50 | 48
 
-> - HUE settings are the same as https//www.projectorcentral.com/Formovie-Theater-UST-Laser-TV-Projector-Review.htm .
-> - BRIGHTNESS Values are set around roughly 70 with some adjustements made from visual feedback, I think those values are not yet optimal. You can test having all set to 50.
-> - SATURATION are based on projector central but with lower values for R, G and FT , to avoid unatural skin tones (and the result seems close to natural to me).
-> - For Magenta I'm not sure such a high value is great.
+> - HUE settings are the same as https//www.projectorcentral.com/Formovie-Theater-UST-Laser-TV-Projector-Review.htm excecpt for yellow.
+> - SATURATION lowered for RED, FT and MAGENTA.
+> - BRIGHTNESS lowered by a lot. Worth trying 50 with Gamma bright as well.
+> - GAIN adusted to same value for all, should be adjusted with color temperature instead.
 
 
 # 2/ SDR (BT709 or BT2020)
