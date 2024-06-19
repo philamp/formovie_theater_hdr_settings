@@ -1,6 +1,6 @@
 > [!TIP]
 > - TLDR:
->   - In HDR mode (with brightness near 50), The projector *seems* to be configured to reach peak physical luminance at maxnits/maxcontrast = 500/50, so it means you should not configure LLDV maxlum to less than 250 nits, otherwise you won't be able to reach peak brightness, because ramping up the contrast cursor stops at 100.
+>   - In HDR mode (with brightness near 50), The projector *seems* to be configured to reach peak physical luminance at maxnits=500|maxcontrast=50, so it means you should not configure LLDV maxlum to less than 250 nits, otherwise you won't be able to reach peak brightness, because ramping up the contrast cursor stops at 100.
 >   - Projector Central settings are mostly good for HUE but:
 >     - CMS BRIGHTNESS settings are bad IMHO.
 >     - They did not care to adjust RED both in GAIN and COLOR TEMPERATURE to avoid pink/purple noise on bright yellow lights.
@@ -53,7 +53,7 @@ Hue        | 0
 This projector has a *very* good 'potential' contrast. It means that to achieve its full potential, the digital maximum brightness value must fit 'just well' within physical capabilities of the projector.
 - In SDR, the 52/40 (brightness/contrast) values will fit well and source material is always fitting well because SDR is easier to deal with.
 - In HDR, as advised in 'Main image', contrast slider must be visually tuned because source material is not always 'fitting well' in terms of actual data and HDR metadata used by the tone-mapping.
-  - The projector seems to be based on a 500 nits basis for a 50 contrast (with brightness near 50 to be accurate): In other words it means that if a pixel in the signal really reaches 500 nits, its actual rendered brightness will indeed fit just well within physical capabilities of the projector if the contrast is set to 50. So if your input signal is tone-mapped for 150nits max, you won't ever reach the physical peak brightness since CONTRAST slider stops at 100.
+  - The projector seems to reach peak luminance on a 500 nits source for a 50 contrast (with brightness near 50, to be accurate): In other words it means that if a pixel in the signal really reaches 500 nits and the contrast is set to 50, its actual rendered brightness will indeed fit just well within max physical capabilities of the projector. So if your input signal is tone-mapped for 150nits max, you won't ever reach the physical peak brightness since CONTRAST slider stops at 100.
     - It also means that, very probably, the HDR10 tone-mapping applied is fixed and set at 500nits maxlum. If I'm not mistaken, it would be a shame because the real peak maxlum nits of this projector with various screens is somwhere between 100 and 300, absolutely not 500 (If you find an affordable projector on the market with such brightness power, please ping me).
     - Formula to have your contrast setting based on LLDV-maxlum : ``contrast_value = (1/(LLDV-maxlum/500))*50``
       - ex: with LLDV maxlum at 150, you would need to set contrast to an impossible value of 166 (although 150nits is probably pretty accurate for the tone-mapping applied, it's eventually becomes suboptimal because of the described issue).
