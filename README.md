@@ -46,13 +46,13 @@ Hue        | 0
 This projector has a *very* good 'potential' contrast. It means that to achieve its full potential, the digital maximum brightness value must fit 'just well' within physical capabilities of the projector.
 - In SDR, the 52/40 (brightness/contrast) values will fit well and source material is always fitting well because SDR is easier to deal with.
 - In HDR, as advised in 'Main image', contrast slider must be visually tuned because source material is not always 'fitting well' in terms of actual data and HDR metadata used by the tone-mapping.
-  - The projector seems to be based on a 500 nits basis for a 50 contrast (or very near to that): so it means if a pixel in the signal really reaches 500 nits, peak brightness will fit just well with a contrast set to 50. So if your input signal is tone-mapped for 150nits max, you won't ever reach the physical peak brightness since Contrast slider stops at 100
+  - The projector seems to be based on a 500 nits basis for a 50 contrast (or very near to that): so it means if a pixel in the signal really reaches 500 nits, peak brightness will fit just well with a contrast set to 50. So if your input signal is tone-mapped for 150nits max, you won't ever reach the physical peak brightness since CONTRAST slider stops at 100
     - It means that, very probably, the HDR10 tone-mapping applied is fixed and set at 500nits maxlum. If I'm not mistaken, it would be a shame because the real peak maxlum nits of this projector with various screens is somwhere between 100 and 300, absolutely not 500.
     - Formula to have your contrast setting based on LLDV-maxlum : ``contrast_value = (1/(LLDV-maxlum/500))*50``
       - ex: with LLDV maxlum at 150, you would neet to set contrast to an impossible value of 166 (although 150nits is probably pretty accurate for the tone-mapping applied, it's eventually suboptimal because of the described issue).
         - It also explains why some people had better results applying (maybe by mistake) a second tone-mapping due to HDR10 source metadata override set on the HDFURY device. If HDR MaxCLL = LLDV maxlum, it basically says the Formovie to tone-map the input signal from lldv-maxlum-value to 500nits, resolving the peak brightness issue but applying 2 tone-mappings in a row. (TODO: provide the neutral HDR setting) 
 - In native Dolby Vision mode, Formovie has opted to cap the max "digital" brigthness to roughly half of the projector/s capabilities. It's maybe to ensure consistant color calibration across luminosity although they recently said they would release a firmware around june 2024 to fix that. In the meantime, the LLDV method is a "power user" solution to break that limit.
-  - Increasing contrast does not fix the issue, it crushes bright lights even more even though it increases peak brightness. 
+  - Increasing contrast does not fix the issue, it crushes bright lights even more even though it increases peak brightness.
 
 ## Color temperature
 --  | value
