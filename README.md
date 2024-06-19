@@ -3,7 +3,7 @@
 >   - In HDR mode (with brightness near 50), The projector *seems* to be based on a maxnits/maxcontrast = 500/50, so it means you should not configure LLDV for maxlum less than 250 nits, otherwise you won't be able to reach peak brightness, because ramping up the contrast cursor stops at 100.
 >   - Projector Central settings are mostly good for HUE but:
 >     - CMS BRIGHTNESS settings are bad IMHO.
->     - They did not care to adjust RED both in GAIN and COLOR TEMPERATURE to avoid pink/purple noise on bright lights.
+>     - They did not care to adjust RED both in GAIN and COLOR TEMPERATURE to avoid pink/purple noise on bright yellow lights.
 >     - CMS GAIN seems to have very similar effect to COLOR TEMPERATURE, Thus I set GAIN to be neutral and only impacted COLOR TEMPERATURE.
 >     - CMS SATURATION settings are way too high in RED, GREEN, MAGENTA and FT, IMHO.
 >   - Things I'm not getting (please explain to me):
