@@ -30,13 +30,13 @@ Hue        | 0
 >   - My LLDV equivalent settings are :
 >     - BT2020 primaries
 >     - ~0.035 nits for minlum (maybe too low for 92" projection size)
->     - ~280 nits for maxlum (~~maybe too high, it's absolutely allright to go down to 100 nits if you have a big screen thus less nits~~ EDIT : Totally WRONG because of peak lum management in the unit, see ``LLDV HDR`` explanation below)
+>     - ~280 nits for maxlum (~~maybe too high, it's absolutely allright to go down to 100 nits if you have a big screen thus less nits~~ EDIT : Totally WRONG because of peak lum management in the unit, see explanation below)
 
 ### About Contrast vs. HDR management
 This projector has a *very* good 'potential' contrast. It means that to achieve its full potential, the digital maximum brightness value must fit 'just well' within physical capabilities of the projector.
 - In SDR, the 52/40 (brightness/contrast) values will fit well and source material is always fitting well because SDR is easier to deal with.
 - In HDR, as advised in 'Main image', contrast slider must be visually tuned because source material is not always 'fitting well' in terms of actual data and HDR metadata used by the tone-mapping.
-  - The projector seems to be based on a 500 nits basis for a 50 contrast (or very near to that): so it means if a pixel in the the signal really reaches 500 nits, peak brightness will fit well with a contrast set 50 (more on that later)
+  - The projector seems to be based on a 500 nits basis for a 50 contrast (or very near to that): so it means if a pixel in the signal really reaches 500 nits, peak brightness will fit just well with a contrast set to 50. So if your input signal is tone-mapped for 150nits max, you won't ever reach the physical peak brightness that the projector can have because you would have to put the contrast cursor at 166 (and the unfortunately the max is at 100)
 - In native Dolby Vision mode, Formovie has opted to cap the max "digital" brigthness to roughly half of the projector/s capabilities. It's maybe to ensure consistant color calibration across luminosity although they recently said they would release a firmware around june 2024 to fix that. In the meantime, the LLDV method is a "power user" solution to break that limit.
   - Increasing contrast does not fix the issue, it crushes bright highlights even more even if it increases the peak brightness. 
 
