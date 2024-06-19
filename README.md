@@ -43,6 +43,7 @@ Hue        | 0
 >     - BT2020 primaries
 >     - ~0.035 nits for minlum (maybe too low for 92" projection size)
 >     - ~280 nits for maxlum (maybe too high, ~~it's absolutely allright to go down to 100 nits if you have a big screen thus less nits~~ EDIT : Totally WRONG because of peak lum management in the unit, see explanations below)
+>     - HDR10 metadata override : ``87:01:1a:5c:02:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00``
 
 ### About Contrast vs. HDR management
 
