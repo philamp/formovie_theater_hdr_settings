@@ -4,7 +4,7 @@
 >   - Projector Central settings are mostly good for HUE but:
 >     - CMS BRIGHTNESS settings are bad IMHO.
 >     - They did not care to adjust RED both in GAIN and COLOR TEMPERATURE to avoid pink/purple noise on bright yellow lights.
->     - CMS GAIN seems to have very similar effect to COLOR TEMPERATURE, Thus I set GAIN to be neutral and only impacted COLOR TEMPERATURE.
+>     - CMS GAIN seems to have very similar effect to COLOR TEMPERATURE, Thus I set GAIN to be neutral and only impacted COLOR TEMPERATURE
 >     - CMS SATURATION settings are way too high in RED, GREEN, MAGENTA and FT, IMHO.
 >   - Things I'm not getting (please explain to me):
 >     - I don't know which GAMMA setting should be theorically set and I don't understand why this settings exists in HDR mode.
@@ -56,7 +56,8 @@ This projector has a *very* good 'potential' contrast. It means that to achieve 
     - It also means that, very probably, the HDR10 tone-mapping applied is fixed and set at 500nits maxlum. If I'm not mistaken, it would be a shame because the real peak maxlum nits of this projector with various screens is somwhere between 100 and 300, absolutely not 500 (If you find an affordable projector on the market with such brightness power, please ping me).
     - Formula to have your contrast setting based on LLDV-maxlum : ``contrast_value = (1/(LLDV-maxlum/500))*50``
       - ex: with LLDV maxlum at 150, you would need to set contrast to an impossible value of 166 (although 150nits is probably pretty accurate for the tone-mapping applied, it's eventually becomes suboptimal because of the described issue).
-        - It also explains why some people had better results applying (maybe by mistake) a second tone-mapping due to HDR10 metadata override set on the HDFURY device. If HDR MaxCLL = LLDV maxlum, it basically says the Formovie to tone-map the input signal from lldv-maxlum-value to 500nits, resolving the peak brightness issue but applying 2 tone-mappings in a row. (TODO: provide the neutral HDR setting) 
+        - It also explains why some people had better results applying (maybe by mistake) a second tone-mapping due to HDR10 metadata override set on the HDFURY device. If HDR MaxCLL = LLDV maxlum, it basically says the Formovie to tone-map the input signal from lldv-maxlum-value to 500nits, resolving the peak brightness issue but applying 2 tone-mappings in a row.
+          - neutral HDR setting in HDfury is ``87:01:1a:5c:02:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00`` 
 - In native Dolby Vision mode, Formovie has opted to cap the max "digital" brigthness to roughly half of the projector/s capabilities. It's maybe to ensure consistant color calibration across luminosity although they recently said they would release a firmware around june 2024 to fix that. In the meantime, the LLDV method is a "power user" solution to break that limit (but has to be done right).
   - Increasing contrast does not fix the issue, it crushes bright lights even more even though it increases peak brightness.
 
@@ -96,7 +97,8 @@ B | 50 | 48*
 > - SATURATION lowered for RED, FT and MAGENTA.
 > - BRIGHTNESS lowered by a lot. Worth trying 50 with Gamma bright as well maybe.
 > - GAIN adusted to same value for all, should be adjusted with COLOR TEMPERATURE instead.
->   - and RED must be lowered by 2 units from default in these both sections (giving 48 and -2) to avoid pink/purple noise on bright lights
+>   - (Maybe this improves contrast at the expense of color gammut and the other way around improves color gammut at the expense of contrast, or maybe both are digital and completely similar) 
+> - RED must be lowered by 2 units from default in both GAIN and COLOR TEMPERATURE sections (giving 48 and -2) to avoid pink/purple noise on bright lights
 > - ``*`` means it was changed from projectorcentral advice
 
 
