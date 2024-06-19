@@ -30,7 +30,15 @@ Hue        | 0
 >   - My LLDV equivalent settings are :
 >     - BT2020 primaries
 >     - ~0.035 nits for minlum (maybe too low for 92" projection size)
->     - ~280 nits for maxlum (maybe too high, it's absolutely allright to go down to 100 nits if you have a big screen thus less nits)
+>     - ~280 nits for maxlum (~~maybe too high, it's absolutely allright to go down to 100 nits if you have a big screen thus less nits~~ EDIT : Totally WRONG because of peak lum management in the unit, see ``LLDV HDR`` explanation below)
+
+### About Contrast vs. HDR management
+This projector has a *very* good 'potential' contrast. It means that to achieve its full potential, the digital maximum brightness value must fit 'just well' within physical capabilities of the projector.
+- In SDR, the 52/40 (brightness/contrast) values will fit well and source material is always fitting well because SDR is easier to deal with.
+- In HDR, as advised in 'Main image', contrast slider must be visually tuned because source material is not always 'fitting well' in terms of actual data and HDR metadata used by the tone-mapping.
+  - The projector seems to be based on a 500 nits basis for a 50 contrast (or very near to that): so it means if a pixel in the the signal really reaches 500 nits, peak brightness will fit well with a contrast set 50 (more on that later)
+- In native Dolby Vision mode, Formovie has opted to cap the max "digital" brigthness to roughly half of the projector/s capabilities. It's maybe to ensure consistant color calibration across luminosity although they recently said they would release a firmware around june 2024 to fix that. In the meantime, the LLDV method is a "power user" solution to break that limit.
+  - Increasing contrast does not fix the issue, it crushes bright highlights even more even if it increases the peak brightness. 
 
 ## Color temperature
 --  | value
@@ -64,7 +72,7 @@ B | 50 | 48*
 
 > - HUE settings are the same as https//www.projectorcentral.com/Formovie-Theater-UST-Laser-TV-Projector-Review.htm excecpt for yellow.
 > - SATURATION lowered for RED, FT and MAGENTA.
-> - BRIGHTNESS lowered by a lot. Worth trying 50 with Gamma bright as well.
+> - BRIGHTNESS lowered by a lot. Worth trying 50 with Gamma bright as well maybe.
 > - GAIN adusted to same value for all, should be adjusted with color temperature instead.
 > - ``*`` means it was changed from projectorcentral advice
 
@@ -90,12 +98,6 @@ Everything else | ``off`` !
 >   - ``De-counter`` set to ``low`` or ``middle`` to mitigate color banding artefacts. 
 >   - ``MPEG NR`` set to  ``low`` or ``middle`` to mitigate compression artefacts.
 > - ``DNR`` gives smearing effects sometimes. I think it must be avoided.  
-
-## About Contrast
-This projector has a *very* good 'potential' contrast. It means that to achieve its full potential, the digital maximum brightness value must fit 'just well' within physical capabilities of the projector.
-- In SDR, the 52/40 (brightness/contrast) values will fit well and source material is always fitting well because SDR is easier to deal with.
-- In HDR, as advised in 'Main image', contrast slider must be visually tuned because source material is not always 'fitting well' in terms of actual data and HDR metadata used by the tone-mapping.
-- In native Dolby Vision mode, Formovie has opted to cap the max brithness to roughly half of the projector/s capabilities. It's maybe to ensure consistant color calibration across luminosity although they recently said they would release a firmware around june 2024 to fix that. In the meantime, the LLDV method is a "power user" solution to break that limit.
 
 > [!CAUTION]
 > Online reviews are measuring contrast without taking that into account and they come up with contrast values that are lower in HDR mode than in SDR.
