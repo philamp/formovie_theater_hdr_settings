@@ -1,12 +1,14 @@
 > [!TIP]
 > - TLDR:
->   - In HDR mode, The projector *seems* to be based on a maxnits/maxcontrast = 500/50, so it means you should not configure LLDV for maxlum less than 250 nits, otherwise you won't be able to reach peak brightness, because ramping up the contrast cursor stops at 100.
+>   - In HDR mode (with brightness near 50), The projector *seems* to be based on a maxnits/maxcontrast = 500/50, so it means you should not configure LLDV for maxlum less than 250 nits, otherwise you won't be able to reach peak brightness, because ramping up the contrast cursor stops at 100.
 >   - Projector Central settings are mostly good for HUE but:
 >     - BRIGHTNESS settings are bad IMHO.
 >     - They did not care to adjust RED both in GAIN and COLOR TEMPERATURE to avoid pink/purple noise on bright lights.
 >     - GAIN seems to have very similar effect to COLOR TEMPERATURE, Thus I set GAIN to be neutral and only impacted COLOR TEMPERATURE.
->     - I don't know which GAMMA setting should be theorically set and I don't understand why this settings exists in HDR mode (I'll be glad if someone can explain it to me)
 >     - SATURATION settings are way too high in RED, GREEN, MAGENTA and FT, IMHO.
+>   - Things I'm not getting (please explain to me):
+>     - I don't know which GAMMA setting should be theorically set and I don't understand why this settings exists in HDR mode.
+>     - Not sure that ``Adaptive luma control`` is not itself a tone-mapping algorithm.
 
 # Formovie Theater Calibration
 
@@ -28,7 +30,7 @@ Initially this is based on : https://www.projectorcentral.com/Formovie-Theater-U
 -- |  value  
 ----- | ----
 Brightness | 48
-Contrast   | 83 *
+Contrast   | 83 (87 with minus 4 for some margin) 
 Saturation | 32
 Hue        | 0
 **Gamma**      | ``middle`` !
@@ -36,23 +38,29 @@ Hue        | 0
 > [!TIP]
 > \* This contrast value has to be adjusted :
 > - On Pure HDR10 it's impossible to have a fixed value : you have to roughly find the max value that does not crush bright lights for each movie : it can be between 50 and 80. Maybe due to bad tone-mapping implementation (or rather HDR10 sources specified with MDL/MaxCLL way higher than any max pixel luminosity in the actual data).
-> - On LLDV content (output as HDR10, see https://www.hdfury.com/enjoy-dynamic-dv-content-from-lldv-source-on-any-hdr10-display/) you can keep a fixed value once you've found the max value that does not crush bright lights (+ 2 points below to have little margin)
+> - On LLDV content (output as HDR10, see https://www.hdfury.com/enjoy-dynamic-dv-content-from-lldv-source-on-any-hdr10-display/) you can keep a fixed value once you've found the max value that does not crush bright lights (+ 2 to 4 points below to have little margin)
 >   - My LLDV equivalent settings are :
 >     - BT2020 primaries
 >     - ~0.035 nits for minlum (maybe too low for 92" projection size)
 >     - ~280 nits for maxlum (maybe too high, ~~it's absolutely allright to go down to 100 nits if you have a big screen thus less nits~~ EDIT : Totally WRONG because of peak lum management in the unit, see explanations below)
 
 ### About Contrast vs. HDR management
+
+>  To understand this part please note that the CONTRAST setting impacts the peak brightness because it's like this transfer function : ``output_brightness = input_brightness * contrast_value``
+> while brightness is basically ``output_brightness = input_brightness + brightness_value``
+
 This projector has a *very* good 'potential' contrast. It means that to achieve its full potential, the digital maximum brightness value must fit 'just well' within physical capabilities of the projector.
 - In SDR, the 52/40 (brightness/contrast) values will fit well and source material is always fitting well because SDR is easier to deal with.
 - In HDR, as advised in 'Main image', contrast slider must be visually tuned because source material is not always 'fitting well' in terms of actual data and HDR metadata used by the tone-mapping.
-  - The projector seems to be based on a 500 nits basis for a 50 contrast (or very near to that): so it means if a pixel in the signal really reaches 500 nits, peak brightness will fit just well with a contrast set to 50. So if your input signal is tone-mapped for 150nits max, you won't ever reach the physical peak brightness since CONTRAST slider stops at 100
-    - It means that, very probably, the HDR10 tone-mapping applied is fixed and set at 500nits maxlum. If I'm not mistaken, it would be a shame because the real peak maxlum nits of this projector with various screens is somwhere between 100 and 300, absolutely not 500.
+  - The projector seems to be based on a 500 nits basis for a 50 contrast (with brightness near 50 to be accurate): In other words it means that if a pixel in the signal really reaches 500 nits, its actual rendered brightness will indeed fit just well within physical capabilities of the projector if the contrast is set to 50. So if your input signal is tone-mapped for 150nits max, you won't ever reach the physical peak brightness since CONTRAST slider stops at 100.
+    - It also means that, very probably, the HDR10 tone-mapping applied is fixed and set at 500nits maxlum. If I'm not mistaken, it would be a shame because the real peak maxlum nits of this projector with various screens is somwhere between 100 and 300, absolutely not 500 (If you find an affordable projector on the market with such brightness power, please ping me).
     - Formula to have your contrast setting based on LLDV-maxlum : ``contrast_value = (1/(LLDV-maxlum/500))*50``
-      - ex: with LLDV maxlum at 150, you would neet to set contrast to an impossible value of 166 (although 150nits is probably pretty accurate for the tone-mapping applied, it's eventually suboptimal because of the described issue).
-        - It also explains why some people had better results applying (maybe by mistake) a second tone-mapping due to HDR10 source metadata override set on the HDFURY device. If HDR MaxCLL = LLDV maxlum, it basically says the Formovie to tone-map the input signal from lldv-maxlum-value to 500nits, resolving the peak brightness issue but applying 2 tone-mappings in a row. (TODO: provide the neutral HDR setting) 
-- In native Dolby Vision mode, Formovie has opted to cap the max "digital" brigthness to roughly half of the projector/s capabilities. It's maybe to ensure consistant color calibration across luminosity although they recently said they would release a firmware around june 2024 to fix that. In the meantime, the LLDV method is a "power user" solution to break that limit.
+      - ex: with LLDV maxlum at 150, you would need to set contrast to an impossible value of 166 (although 150nits is probably pretty accurate for the tone-mapping applied, it's eventually becomes suboptimal because of the described issue).
+        - It also explains why some people had better results applying (maybe by mistake) a second tone-mapping due to HDR10 metadata override set on the HDFURY device. If HDR MaxCLL = LLDV maxlum, it basically says the Formovie to tone-map the input signal from lldv-maxlum-value to 500nits, resolving the peak brightness issue but applying 2 tone-mappings in a row. (TODO: provide the neutral HDR setting) 
+- In native Dolby Vision mode, Formovie has opted to cap the max "digital" brigthness to roughly half of the projector/s capabilities. It's maybe to ensure consistant color calibration across luminosity although they recently said they would release a firmware around june 2024 to fix that. In the meantime, the LLDV method is a "power user" solution to break that limit (but has to be done right).
   - Increasing contrast does not fix the issue, it crushes bright lights even more even though it increases peak brightness.
+
+> I remember that I encoutered the 500nits value by looking at the attributes reported by the Projectivy Android app and it seems to be confirmed by my observations from tuning both LLDV settings and contrast : Taking the above formula, I end up with a contrast of 89, very near of the peak value (87) where I observed bright lights as high as possible without being crushed.
 
 ## Color temperature
 --  | value
