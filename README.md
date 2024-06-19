@@ -134,7 +134,7 @@ Everything else | ``off`` !
 > - ``Advanced video`` > ``Adaptive luma control`` set to ``middle`` (other values are suboptimal IMHO) can be great in SDR and can help in pure HDR too, but it's also matter of taste and it's somewhat breaking the director's intent.
 
 ## 11 points white balance correction
-I found correction to be very subtle but great anyway : https://www.projectorcentral.com/Formovie-Theater-UST-Laser-TV-Projector-Review.htm .
+I found correction to be very subtle but great anyway : https://www.projectorcentral.com/Formovie-Theater-UST-Laser-TV-Projector-Review.htm . And this theorically helps to change global white balance while keeping hus/saturation the same.
 
 # 4/ Resources
 - https://lightillusion.com/what_is_hdr.html - has some very good points
