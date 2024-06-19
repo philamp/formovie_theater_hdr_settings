@@ -1,3 +1,8 @@
+> [!TIP]
+> - TLDR:
+>   - The projector seems to be based on a maxnits/maxcontrast = 500/50, so it means you should not configure LLDV for maxlum less than 250 nits, otherwise you won't be able to reach peak brightness.
+>   -  
+
 # Formovie Theater Calibration
 
 My calibration values for the Formovie Theater projector, which is hard to calibrate in HDR for some reason.
@@ -37,6 +42,7 @@ This projector has a *very* good 'potential' contrast. It means that to achieve 
 - In SDR, the 52/40 (brightness/contrast) values will fit well and source material is always fitting well because SDR is easier to deal with.
 - In HDR, as advised in 'Main image', contrast slider must be visually tuned because source material is not always 'fitting well' in terms of actual data and HDR metadata used by the tone-mapping.
   - The projector seems to be based on a 500 nits basis for a 50 contrast (or very near to that): so it means if a pixel in the signal really reaches 500 nits, peak brightness will fit just well with a contrast set to 50. So if your input signal is tone-mapped for 150nits max, you won't ever reach the physical peak brightness that the projector can have because you would have to put the contrast cursor at 166 (and the unfortunately the max is at 100)
+    - Formula to have your contrast setting based on LLDV-maxlum : contrast=1/(LLDV-maxlum/500)*50 
 - In native Dolby Vision mode, Formovie has opted to cap the max "digital" brigthness to roughly half of the projector/s capabilities. It's maybe to ensure consistant color calibration across luminosity although they recently said they would release a firmware around june 2024 to fix that. In the meantime, the LLDV method is a "power user" solution to break that limit.
   - Increasing contrast does not fix the issue, it crushes bright highlights even more even if it increases the peak brightness. 
 
