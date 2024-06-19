@@ -61,7 +61,7 @@ This projector has a *very* good 'potential' contrast. It means that to achieve 
 - In native Dolby Vision mode, Formovie has opted to cap the max "digital" brigthness to roughly half of the projector/s capabilities. It's maybe to ensure consistant color calibration across luminosity although they recently said they would release a firmware around june 2024 to fix that. In the meantime, the LLDV method is a "power user" solution to break that limit (but has to be done right).
   - Increasing contrast does not fix the issue, it crushes bright lights even more even though it increases peak brightness.
 
-> I remember that I encoutered the 500nits value by looking at the attributes reported by the Projectivy Android app and it seems to be confirmed by my observations from tuning both LLDV settings and contrast : Taking the above formula, I end up with a contrast of 89, very near of the peak value (87) where I observed bright lights as high as possible without being crushed.
+> I remember that I encoutered the 500nits value by looking at the attributes reported by the Projectivy Android app and it seems to be confirmed by my observations from tuning both LLDV settings and contrast : Taking the above formula, I end up with a contrast of 89, very near to the peak value (87) where I observed bright lights as high as possible without being crushed.
 
 ## Color temperature
 --  | value
