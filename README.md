@@ -1,7 +1,9 @@
 > [!TIP]
 > - TLDR:
 >   - The projector seems to be based on a maxnits/maxcontrast = 500/50, so it means you should not configure LLDV for maxlum less than 250 nits, otherwise you won't be able to reach peak brightness.
->   -  
+>   - Projector Central settings are mostly good for HUE but:
+>     - Brightness settings are bad IMHO
+>     - They don't adjust red gain and red color balance to avoid pink/purple noise on high brightlights
 
 # Formovie Theater Calibration
 
