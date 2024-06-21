@@ -49,6 +49,7 @@ Hue        | 0
 
 >  To understand this part please note that the CONTRAST setting impacts the peak brightness because it's like this transfer function : ``output_brightness = input_brightness * contrast_value``
 > while brightness is basically ``output_brightness = input_brightness + brightness_value``
+> - LLDV = Low Latency Dolby Vision : https://www.avsforum.com/threads/alternative-devices-for-enabling-lldv-please-read-posts-1-2.3254266/
 
 This projector has a *very* good 'potential' contrast. It means that to achieve its full potential, the digital maximum brightness value must fit 'just well' within physical capabilities of the projector.
 - In SDR, the 52/40 (brightness/contrast) values will fit well and source material is always fitting well because SDR is easier to deal with.
