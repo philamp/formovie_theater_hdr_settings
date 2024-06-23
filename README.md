@@ -30,7 +30,7 @@ Initially this is based on : https://www.projectorcentral.com/Formovie-Theater-U
 -- |  value  
 ----- | ----
 Brightness | 48
-Contrast   | 83* (87 with minus 4 for some margin) 
+Contrast   | 85* (89 with minus 4 for some margin) 
 Saturation | 32
 Hue        | 0
 **Gamma**      | ``middle`` !
@@ -81,13 +81,13 @@ B | -28
 
 -- | HUE | SATURATION | BRIGHTNESS
 ---- | ---- | ---- | ----
-R | 53 | 52* | 61*
+R | 52 | 52* | 61*
 G | 41 | 54* | 60*
 B | 51 | 50 | 69*
 C | 57 | 46 | 68*
 M | 40 | 55* | 63* 
 Y | 55* | 50* | 59* 
-FT | 48 | 48* | 55*
+FT | 48 | 48* | 52*
 
 --  | OFFSET |  GAIN
 ---- | ---- | ----
