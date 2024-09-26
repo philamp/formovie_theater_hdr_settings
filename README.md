@@ -63,6 +63,9 @@ This projector has a *very* good 'potential' contrast. It means that to achieve 
   - Increasing contrast does not fix the issue, it crushes bright lights even more even though it increases peak brightness.
     - In the meantime, the LLDV method is a "power user" solution to break that limit (but has to be done right).
 
+> [!CAUTION]
+> Online reviews are measuring contrast without taking all the above into account and they come up with contrast values that are lower in HDR mode than in SDR.
+
 ## Color temperature
 --  | value
 ---- | ----
@@ -123,9 +126,6 @@ Everything else | ``off`` !
 >   - ``De-counter`` set to ``low`` or ``middle`` to mitigate color banding artefacts. 
 >   - ``MPEG NR`` set to  ``low`` or ``middle`` to mitigate compression artefacts.
 > - ``DNR`` gives smearing effects sometimes. I think it must be avoided.  
-
-> [!CAUTION]
-> Online reviews are measuring contrast without taking that into account and they come up with contrast values that are lower in HDR mode than in SDR.
 
 > [!TIP]
 > - Tone-mapping to SDR will only fix this issue marginally, but is also a good solution if your player device has good HDR to SDR tone-mapping, especially if your screen max luminosity is around 100 nits (as 100 nits value is often used for the HDR to SDR tone-mapping).
