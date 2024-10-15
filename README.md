@@ -62,8 +62,7 @@ This projector has a *very* good 'potential' contrast. It means that to achieve 
     - It also explains why some people had better results applying (maybe by mistake) a second tone-mapping due to HDR10 metadata override set on the HDFURY device. If HDR MaxCLL = LLDV maxlum, it basically says the Formovie to tone-map the input signal from lldv-maxlum-value to 500nits, resolving the peak brightness issue but applying 2 tone-mappings in a row.
     - neutral HDR setting in HDfury is ``87:01:1a:5c:02:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00`` 
 - In native Dolby Vision mode, Formovie has opted to cap the max "digital" brigthness to roughly half of the projector/s capabilities. It's maybe to ensure consistant color calibration across luminosity.
-  - Increasing contrast does not fix the issue, it crushes bright lights even more even though it increases peak brightness.
-    - In the meantime, the LLDV method is a "power user" solution to break that limit (but has to be done right).
+  - Increasing contrast does not fix the issue, it crushes bright lights even more even though it increases peak brightness. LLDV trick is the solution to break that limit.
   - In recent firmware update, there is a new "DV vivid" mode. I think it's better but not yet on par with LLDV trick.
 
 > [!CAUTION]
