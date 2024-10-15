@@ -61,9 +61,10 @@ This projector has a *very* good 'potential' contrast. It means that to achieve 
     - Formula to have your contrast setting based on LLDV-maxlum : ``contrast_value = (1/(LLDV-maxlum/500))*50`` (EDIT: this is an approximation as contrast 0 is not really contrast 0, possibly the absolute 0 is at -10 and thus unreachable with UI, and peak brithness is maybe at contrast 40 with 500 nits).
     - It also explains why some people had better results applying (maybe by mistake) a second tone-mapping due to HDR10 metadata override set on the HDFURY device. If HDR MaxCLL = LLDV maxlum, it basically says the Formovie to tone-map the input signal from lldv-maxlum-value to 500nits, resolving the peak brightness issue but applying 2 tone-mappings in a row.
     - neutral HDR setting in HDfury is ``87:01:1a:5c:02:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00`` 
-- In native Dolby Vision mode, Formovie has opted to cap the max "digital" brigthness to roughly half of the projector/s capabilities. It's maybe to ensure consistant color calibration across luminosity although they recently said they would release a firmware around june 2024 to fix that.
+- In native Dolby Vision mode, Formovie has opted to cap the max "digital" brigthness to roughly half of the projector/s capabilities. It's maybe to ensure consistant color calibration across luminosity.
   - Increasing contrast does not fix the issue, it crushes bright lights even more even though it increases peak brightness.
     - In the meantime, the LLDV method is a "power user" solution to break that limit (but has to be done right).
+  - In recent firmware update, there is a new "DV vivid" mode. I think it's better but not yet on par with LLDV trick.
 
 > [!CAUTION]
 > Online reviews are measuring contrast without taking all the above into account and they come up with contrast values that are lower in HDR mode than in SDR.
