@@ -1,7 +1,7 @@
 > [!TIP]
 > - TLDR:
 >   - In HDR mode (with brightness near 50), The projector *seems* to be configured to reach peak physical luminance at maxnits=500|maxcontrast=50, so it means you should not configure LLDV maxlum to less than 250 nits, otherwise you won't be able to reach peak brightness, because ramping up the contrast cursor stops at 100.
->   - [Projector Central](https://www.projectorscreen.com/projector-screen-calculators) settings are mostly good for HUE but:
+>   - [Projector Central](https://www.projectorcentral.com/Formovie-Theater-UST-Laser-TV-Projector-Review.htm) settings are mostly good for HUE but:
 >     - CMS BRIGHTNESS settings are bad IMHO.
 >     - They did not care to adjust RED both in GAIN and COLOR TEMPERATURE to avoid pink/purple noise on bright yellow lights.
 >     - CMS GAIN seems to have very similar effect to COLOR TEMPERATURE, Thus I set GAIN to be neutral and only impacted COLOR TEMPERATURE
